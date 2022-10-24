@@ -52,14 +52,11 @@
         const btn02 = $('#btn02');
         const btn03 = $('#btn03');
         const btn04 = $('#btn04');
-        const btn05 = $('#btn05');
 
         const info01 = $('#info01');
         const info02 = $('#info02');
         const info03 = $('#info03');
         const info04 = $('#info04');
-        const info05 = $('#info05');
-
 
         // Audios------------------------------------------------------
         const audio = [
@@ -121,13 +118,6 @@
         function clickBtn04(){
             parpadear(btn04);
         }
-        function siguienteAudio04(){
-            aplicacion.reproducirAudio(audio[9], clickBtn05, 1);
-        }
-
-        function clickBtn05(){
-            parpadear(btn05);
-        }
 
         function finalPagina(){
             aplicacion.terminaPantalla();
@@ -157,16 +147,9 @@
         });
         btn04.click(function(){
             if(btn04.css('cursor') == 'pointer'){
-                aplicacion.reproducirAudio(audio[8], siguienteAudio04, 1);
+                aplicacion.reproducirAudio(audio[8], finalPagina, 1);
                 dejarParpadear(btn04);
                 animacionEntrada(info04, 'default', 1, 1);
-            }
-        });
-        btn05.click(function(){
-            if(btn05.css('cursor') == 'pointer'){
-                aplicacion.reproducirAudio(audio[10], finalPagina, 1);
-                dejarParpadear(btn05);
-                animacionEntrada(info05, 'default', 1, 1);
             }
         });
 
